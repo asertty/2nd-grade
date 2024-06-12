@@ -1,0 +1,101 @@
+drop table test_book;
+create table test_book(
+book_id number(3) not null primary key,
+title varchar2(100),
+author varchar2(50),
+pub_year number(4),
+genre varchar2(20),
+borrowed_by number(3)
+);
+
+drop table test_member;
+create table test_member(
+mem_no number(3) not null primary key,
+name varchar2(20),
+join_date date,
+jumin varchar2(20),
+phone number(8)
+);
+
+insert into test_book values(301,'리틀라이프', '한야 야나기하라', 2016, '소설', 101);
+insert into test_book values(302,'불변의 법칙', '모건 하우절', 2024, '에세이', 102);
+insert into test_book values(303,'더 머니 북', '토스', 2024, '금융',NULL);
+insert into test_book values(304,'나를 소모하지 않는 현명한 태도에 관하여', '마티아스 뇔케', 2024, '인간관계', 105);
+insert into test_book values(305,'모순', '양귀자', 2013, '소설',NULL);
+insert into test_book values(306,'부자의 마지막 가르침', '다우치 마나부', 2024, '금융', 101);
+insert into test_book values(307,'허송세월', '김훈', 2024, '에세이', 104);
+insert into test_book values(308,'나의 돈키호테', '김호연', 2024, '소설', 105);
+
+select * from TEST_BOOK;
+
+insert into test_member values(101,'김성일', '2022-05-05', '850301-1111111', 11112222);
+insert into test_member values(102,'나성일', '2022-07-07', '090707-3333333', 33334444);
+insert into test_member values(103,'박성일', '2022-12-22', '990301-2222222', 55556666);
+insert into test_member values(104,'이성일', '2022-09-28', '900301-2222222', 77778888);
+insert into test_member values(105,'하성일', '2022-10-18', '110102-4444444', 99990000);
+
+select * from TEST_member;
+
+1. TEST_BOOK 테이블에서 장르가 소설이라면 'A' 에세이라면 'B' 금융이라면 'C' 이외에는 'D'를 부여하여 출력하는 쿼리문을 작성하시오.
+(책제목, 저자, 장르)
+
+select title, genre, case author when '소설' then 'A' when '에세이' then 'B' when '금융' then 'C' else 'D' end
+from TEST_BOOK;
+
+2. TEST_BOOK 테이블에서 책 개수를 장르별로 출력하시오.
+
+select genre,count(*)
+from test_book
+group by genre;
+
+3. TEST_BOOK 테이블에서 책의 제목과 저자를 각각 Book_Title과 Author_Name이라는 별칭으로 조회하시오.
+
+SELECT title AS Book_Title, author AS Author_Name
+FROM test_book;
+
+4. TEST_MEMBER 테이블에서 회원의 이름과 전화번호를 "이름: 전화번호" 형식으로 조회하시오.
+
+SELECT name || ': ' || phone
+FROM test_member;
+
+5. TEST_BOOK 테이블에서 전체 책의 개수를 조회하시오.
+
+SELECT COUNT (*)
+FROM test_book;
+
+6. test_book 테이블에서 borrowed_by가 NULL인 책의 제목을 조회하시오.
+
+select title
+from test_book
+where borrowed_by  is null;
+
+7. TEST_BOOK 테이블에서 출판년도가 2016년 이후인 책이라면 'A' 아니라면 'B'를 부여하여 출력하는 쿼리문 CASE로 작성하시오.
+(책제목, 출판년도)
+
+SELECT title, pub_year, CASE WHEN pub_year >- 2016 THEN 'A' ELSE 'B'
+END AS 출판넌도
+FROM test_book;
+
+8. test_book 테이블에서 borrowed_by가 NULL인 행을 제외한 전체 테이블을 출력하시오.
+
+select *
+from test_book
+where borrowed_by is not null;
+
+보너스 문제)
+9.회원 테이블에 모든 정보를 출력(가입일자 대신 가입연도를 출력)
+select mem_no, name, TO_CHAR(join_date,'YYYY') 가입연도, jumin, phone
+from test_member; 
+
+10. 회원 테이블에 모든 정보를 출력(가입일자 대신 가입연도를 출력)
+	전화번호를 하이픈(-) 넣어서 출력
+	
+select mem_no, name, TO_CHAR(join_date,'YYYY') 가입연도, jumin,
+	'010-'||SUBSTR(phone,1,4)||'-'||SUBSTR(phone,5,4) as 전화번호
+from test_member; 
+
+/* [책제목 대여자 회원명 성별(남자/여자)]의 형식으로 조회하는 쿼리문 작성 (대여자가 없는 도서의 목록도 출력) */
+
+select  B.title 책제목, B.borrowed_by 대여자, M.name 회원명, caseSUBSTR(jumin,8,1) when '1' then '남자' when '2' then '여자' when '3' then '남자' when '4' then '여자' end as성별
+from test_book B, test_member M
+where B.borrowed_by = M.mem_no(+);

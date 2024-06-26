@@ -2,100 +2,69 @@ package a;
 
 import java.util.EmptyStackException;
 
-class Stack<T>{
+class Stack<T>{//스택
 
-   class Node<T>{
+   class Node<T>{//노드
 
-       private T data;
-
-       private Node<T> next;
+       private T data;//데이터
+       private Node<T> next;//링크
 
        public Node(T data) {
-
            this.data = data;
-
        }
-
    }
-
-
 
    private Node<T> top;
 
    public T pop() {
 
        if (top == null) {
-
            throw new EmptyStackException();
-
+           // 남은 데이터가 없어서 예외처리
        }
 
        T item = top.data;
-
        top = top.next;
-
        return item;
 
    }
 
    public void push(T item) {
-
+       //데이터 삽입
        Node<T> t = new Node<T>(item);
-
        t.next = top;
-
        top = t;
-
    }
 
    public T peek() {
-
+      // top에 위치한 데이터 출력
        if(top == null) {
-
            throw new EmptyStackException();
-
        }
-
        return top.data;
-
    }
 
    public boolean isEmpty() {
-
        return top == null;
-
    }
-
 }
 
 public class Main {
-
    public static void main(String[] args) {
-
        Stack<Integer> s = new Stack<Integer>();
 
        s.push(1);
-
        s.push(2);
-
        s.push(3);
-
        s.push(4);
 
        System.out.println(s.pop());
-
        System.out.println(s.pop());
-
        System.out.println(s.peek());
-
        System.out.println(s.pop());
-
        System.out.println(s.isEmpty());
-
        System.out.println(s.pop());
-
        System.out.println(s.isEmpty());
-
    }
 
 }

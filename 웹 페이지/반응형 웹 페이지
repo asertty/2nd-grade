@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 레시피</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 2em;
+        }
+        .food-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 30%;
+            margin-bottom: 2em;
+        }
+        .food-item img {
+            width: 100%;
+            height: auto;
+        }
+        .food-item h2 {
+            text-align: center;
+            padding: 0.5em 0;
+        }
+        .food-item p {
+            padding: 1em;
+            text-align: justify;
+        }
+        .food-item .instructions {
+            padding: 1em;
+            background-color: #fafafa;
+        }
+        .food-item .instructions h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+ <header>
+        <h1>음식 레시피</h1>
+ </header>
+    <div class="container">
+        <div class="food-item">
+            <img src="스크린샷 2024-06-28 121732.png" alt="떡볶이">
+            <h2>떡볶이</h2>
+            <p>재료 : 떡 2컵, 물 2컵, 대파 1/2(생략가능), 통깨 한꼬집(생략가능)<br>
+               양념 : 고추장 1T, 고추가루 1.5T, 간장 2T, 설탕 3T
+            </p>
+            <div class="instructions">
+                <h3>조리순서:</h3>
+                <p>1. 물 2컵을 냄비에 붓고 끓입니다.</p>
+                <p>2. 물이 끓으면 떡과 양념 재료를 모두 넣습니다.</p>
+                <p>3. 떡이 부드러워질 때까지 중간불에서 끓입니다.</p>
+                <p>4. 대파를 넣고 한 번 더 끓입니다.</p>
+                <p>5. 그릇에 담아 통깨를 뿌려서 마무리합니다.</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="스크린샷 2024-06-28 121819.png" alt="김치볶음밥">
+            <h2>김치볶음밥</h2>
+            <p>재료 : 김치 1국그릇, 대파 1개, 식용유 약간, 베이컨 3장(생략가능), 달걀 2개, 간장 1스푼
+               </p>
+            <div class="instructions">
+                <h3>조리순서:</h3>
+                <p>1. 대파를 송송 썰어줍니다.</p>
+                <p>2. 팬에 식용유를 두르고 대파를 볶습니다.</p>
+                <p>3. 김치를 넣고 중간불에서 볶아줍니다.</p>
+                <p>4. 베이컨을 잘게 썰어 함께 볶습니다.</p>
+                <p>5. 밥을 넣고 간장을 뿌려가며 볶아줍니다.</p>
+                <p>6. 달걀 프라이를 해서 볶음밥 위에 올려줍니다.</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <img src="스크린샷 2024-06-28 121834.png" alt="파스타">
+            <h2>알리오 올리오 파스타</h2>
+            <p>재료 및 양념: 파스타 1줌, 통마늘 3~4개, 페페론치노 1큰술(생략가능), 면수or물 1/2컵, 올리브유 5큰술, 다진마늘 1큰술, 소금 약간</p>
+            <div class="instructions">
+                <h3>조리순서:</h3>
+                <p>1. 파스타를 소금물에 삶아줍니다.</p>
+                <p>2. 팬에 올리브유를 두르고 통마늘과 다진마늘을 볶습니다.</p>
+                <p>3. 페페론치노를 넣고 약한 불에서 천천히 볶아줍니다.</p>
+                <p>4. 삶은 파스타를 팬에 넣고 면수나 물을 추가합니다.</p>
+                <p>5. 소금을 약간 넣어 간을 맞춥니다.</p>
+                <p>6. 잘 섞어 접시에 담아내면 완성입니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

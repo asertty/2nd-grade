@@ -1,7 +1,7 @@
-## UI테스트 기법
+## UI테스트
 
 <details>
-
+<summary>UI테스트 기법 4가지</summary>
 
 ### 휴리스틱 평가
 

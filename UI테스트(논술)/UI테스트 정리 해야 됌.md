@@ -27,7 +27,8 @@
 <details>
 <summary> Ⅱ. 구현된 UI ⭐</summary>
 
-#### 테스트의 가치
+## 테스트의 가치
+
 목적과 필요성, 중요성
 
 ## 1. 
@@ -108,7 +109,7 @@
 1. 장점: 상대적으로 비용이 적게 들어가고, 짧은 시간, 초기에 문제점을 발견할 수 있다.
 
 2. 단점:
-    1. 구체적으고 계량적인 평가 자료를 만들기 어렵다.
+    1. 구체적이고 계량적인 평가 자료를 만들기 어렵다.
     2. 전문가과 사용자가 시스템을 바라보는 시각이 다를 수 있다.
     3. 전문가의 능력에 따라 평가 결과가 달라질 수 있다.
     
@@ -166,6 +167,7 @@
 <details>
 <summary> 테스트 환경 및 고려해야 할 사항 ⭐</summary>
 
+### 테스트 환경 및 고려사항⭐
 
 <1. 주요 항목 검증과 테스트 환경>
 
@@ -190,7 +192,9 @@
 
 
 <details>
-<summary> 사용성 테스트 계획 작성 ⭐</summary>
+<summary> 사용성 테스트 목적 ⭐</summary>
+
+## 사용성 테스트 계획 작성 및 
 
 <1. 개요>
 1. 적절한 테스트 방법과 평가 대상자 선정
@@ -226,4 +230,4 @@
 
 </details>
 
-교과서: https://drive.google.com/file/d/17W5MDmzeS5Ilvi5T9LgGxynZ660pgjso/view?usp=drive_link
+교과서: https://drive.google.com/file/d/1SBENKIv6I2xJVrvENRlbWR-hav-GDAv6/view?usp=drive_link

@@ -166,6 +166,7 @@
 <details>
 <summary> 테스트 환경 및 고려해야 할 사항 ⭐</summary>
 
+
 <1. 주요 항목 검증과 테스트 환경>
 
 일반적인 점검을 해야 하는 항목 
@@ -176,6 +177,7 @@
 4. 주요 작업이 시스템을 망가뜨리지 않도록 확인
 
 <2. 구축할 시 고려해야 할 사항⭐>
+
 사용성 테스트 환경을 구축할 시 중점적으로 고려해야 할 사항
 
 1. 테스트 대상 제품, 실제 운영될 대상 제품 환경과 유사
@@ -224,4 +226,4 @@
 
 </details>
 
-https://drive.google.com/file/d/17W5MDmzeS5Ilvi5T9LgGxynZ660pgjso/view?usp=drive_link
+교과서: https://drive.google.com/file/d/17W5MDmzeS5Ilvi5T9LgGxynZ660pgjso/view?usp=drive_link

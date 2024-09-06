@@ -1,6 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=200&section=header" />
 
-## UI테스트 기법 선정
+## UI테스트 기법 선정 (시험 내용 = ⭐)
 
 <details>
 <summary> Ⅰ. UI테스트 기법 4가지 목적 ⭐</summary>
@@ -16,11 +16,11 @@
 
 ### 선호도 평가 ⭐
 
-    사용자의 감성(주관적)을 고학적인 시점에서 객관적으로 해석
+    사용자의 감성(주관적)을 과학적인 시점에서 객관적으로 해석
 
 ### 성능 평가 ⭐
 
-    개발 마지막 단계에서 장단점을 파악하기 위해 실행
+    개발 마지막 단계에서 각 제품과 서비스의 장단점을 파악하기 위해 실행
 
 </details>
 
@@ -136,7 +136,6 @@
 
 ## UI테스트 환경 구축
 
-
 <details>
 <summary>  테스트 환경 구축 ⭐</summary>
 
@@ -191,8 +190,18 @@
 ## UI테스트 계획서 작성
 
 
+
 <details>
+    
 <summary> 사용성 테스트 목적 ⭐</summary>
+
+     사용자가 프로그램을 사용하기 쉽도록 수정하기 위하여 사용성 테스트를 사용한다.
+    
+</details>
+    
+<details>
+    
+<summary> 사용성 테스트 개요 및 계획 작성 </summary>
 
 ## 사용성 테스트 개요 및 계획 작성
 

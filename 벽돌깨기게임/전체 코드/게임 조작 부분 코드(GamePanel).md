@@ -1,5 +1,6 @@
 ## GamePanel.java
-
+    
+    
     package main;
     
     import javax.swing.*;
@@ -50,7 +51,7 @@
     
             // 점수 표시
             g.setColor(Color.white);
-            g.setFont(new Font("Serif", Font.BOLD, 25));
+            g.setFont(new Font("돋움", Font.BOLD, 25));
             g.drawString("점수: " + score, 590, 30);
             g.drawString("스테이지: " + stage, 450, 30);
     
@@ -75,7 +76,7 @@
                 ballDirX = 0;
                 ballDirY = 0;
                 g.setColor(Color.red);
-                g.setFont(new Font("점수는? :", Font.BOLD, 30));
+                g.setFont(new Font("돋움", Font.BOLD, 30));
                 g.drawString("클리어!", 260, 300);
                 g.drawString("다음 스테이지: 클릭하여 진행", 230, 350);
                 gameOver = false;
@@ -87,8 +88,8 @@
                 ballDirX = 0;
                 ballDirY = 0;
                 g.setColor(Color.red);
-                g.setFont(new Font("점수는? :", Font.BOLD, 30));
-                g.drawString("게임 종료.. Score: " + score, 190, 300);
+                g.setFont(new Font("돋움", Font.BOLD, 30));
+                g.drawString("게임 종료.. 점수는: " + score, 190, 300);
                 g.drawString("다시하기: 클릭하여 다시 시작", 230, 350);
                 gameOver = true;
             }
@@ -103,13 +104,13 @@
             if (play) {
                 // 공이 패들과 충돌하는지 확인
                 if (new Rectangle(ballPosX, ballPosY, 20, 20).intersects(new Rectangle(playerX, 550, 100, 8))) {
-                    // 패드의 위치에 따라 공의 방향을 조정
+                    // 패들의 위치에 따라 공의 방향을 조정
                     int paddleCenter = playerX + 50;
                     int ballCenter = ballPosX + 10;
                     int deltaX = ballCenter - paddleCenter;
     
                     ballDirY = -ballDirY;
-                    ballDirX = deltaX / 10; // 패드의 위치에 따라 공의 방향 조정
+                    ballDirX = deltaX / 10; // 패들의 위치에 따라 공의 방향 조정
                 }
     
                 A: for (int i = 0; i < map.map.length; i++) {
